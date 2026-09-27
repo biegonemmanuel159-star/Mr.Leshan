@@ -51,13 +51,13 @@ const bundledNotes = [
     name: "Grade 10 ICT Notes — Term 1, 2 & 3",
     category: "ict",
     size: "PDF",
-    dataUrl: "notes/GRADE-10-ICT-NOTES-TERM-1-2-3-TEACHER.CO_.KE_.pdf"
+    dataUrl: "GRADE-10-ICT-NOTES-TERM-1-2-3-TEACHER.CO_.KE_.pdf"
   },
   {
     name: "Grade 10 Computer Science Notes — Term 1, 2 & 3",
     category: "computer",
     size: "PDF",
-    dataUrl: "notes/GRADE-10-COMPUTER-SCIENCE-NOTES-TERM-1-2-3-TEACHER.CO_.KE_.pdf"
+    dataUrl: "GRADE-10-COMPUTER-SCIENCE-NOTES-TERM-1-2-3-TEACHER.CO_.KE_.pdf"
   }
 ];
 
