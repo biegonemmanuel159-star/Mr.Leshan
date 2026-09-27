@@ -1,0 +1,15 @@
+{
+  "name": "mr-leshan-website",
+  "version": "1.0.0",
+  "description": "Mr Leshan profile and Computer & ICT notes website",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node server.js"
+  },
+  "dependencies": {
+    "cheerio": "^1.1.2",
+    "cors": "^2.8.5",
+    "express": "^5.1.0"
+  }
+}
