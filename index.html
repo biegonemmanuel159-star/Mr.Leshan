@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Mr Leshan — Computer & ICT learning hub and professional profile." />
+  <title>Mr Leshan | Computer & ICT Hub</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="background-glow glow-one"></div>
+  <div class="background-glow glow-two"></div>
+
+  <header class="topbar">
+    <div class="brand">
+      <span class="brand-mark">ML</span>
+      <span>Mr Leshan</span>
+    </div>
+
+    <nav>
+      <a href="#home">Home</a>
+      <a href="#about">Profile</a>
+      <a href="#notes">ICT Notes</a><a href="#credentials">Skills</a><a href="#projects">Projects</a>
+      <a href="#import">Import</a>
+    </nav>
+
+    <button class="theme-btn" id="themeBtn" aria-label="Toggle theme">◐</button>
+  </header>
+
+  <main>
+    <section class="hero" id="home">
+      <div class="hero-card">
+        <div class="photo-wrap">
+          <img id="profilePhoto" src="profile.jpeg.png" alt="Mr Leshan profile photo">
+          <label class="photo-upload" title="Upload profile photo">
+            <input id="photoInput" type="file" accept="image/*" hidden>
+            <span>＋</span>
+          </label>
+        </div>
+
+        <p class="eyebrow">COMPUTER • ICT • DIGITAL LEARNING</p>
+        <h1 id="profileName">Mr Leshan</h1><p id="profileRealName" class="real-name">Biegon Emmanuel</p>
+        <p id="profileTagline" class="hero-subtitle">
+          Computer & ICT educator, digital skills resource hub and learning guide.
+        </p>
+
+        <div class="hero-actions">
+          <a class="btn primary" href="#notes">Explore ICT Notes</a>
+          <a class="btn secondary" href="#about">View Profile</a>
+        </div>
+
+        <div class="quick-stats">
+          <div><strong id="noteCount">0</strong><span>Notes</span></div>
+          <div><strong>ICT</strong><span>Learning</span></div>
+          <div><strong>∞</strong><span>Resources</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="about">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">PROFILE</p>
+          <h2>About Mr Leshan</h2>
+        </div>
+        <button class="small-btn" id="editProfileBtn">Edit profile</button>
+      </div>
+
+      <div class="profile-grid">
+        <article class="glass-card">
+          <h3>Professional Profile</h3>
+          <p id="profileBio">
+            Welcome to the Mr Leshan digital learning space. This section can be
+            populated from your existing website and edited here.
+          </p>
+          <div class="tag-list" id="profileTags">
+            <span>Computer Studies</span>
+            <span>ICT</span>
+            <span>Digital Skills</span>
+            <span>Technology</span>
+          </div>
+        </article>
+
+        <article class="glass-card">
+          <h3>Quick Information</h3>
+          <div class="info-list" id="contactGrid">
+            <div><span>Role</span><strong>ICT Educator</strong></div>
+            <div><span>Focus</span><strong>Computer & ICT</strong></div>
+            <div><span>Resources</span><strong>Notes & Learning Materials</strong></div>
+            <div><span>Source</span><strong id="sourceLabel">Not imported yet</strong></div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="section" id="credentials">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">CREDENTIALS & EXPERTISE</p>
+          <h2>Education, interests & skills</h2>
+          <p class="muted">Information structured from the existing Biegon Emmanuel website.</p>
+        </div>
+      </div>
+
+      <div class="profile-grid">
+        <article class="glass-card">
+          <h3>Education</h3>
+          <div id="educationList" class="education-list"></div>
+        </article>
+        <article class="glass-card">
+          <h3>Areas of Interest</h3>
+          <div id="interestsGrid" class="chip-grid"></div>
+        </article>
+      </div>
+
+      <article class="glass-card skills-card">
+        <h3>Professional Skills</h3>
+        <div id="skillsGrid" class="chip-grid"></div>
+      </article>
+    </section>
+
+    <section class="section" id="projects">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">PROJECTS</p>
+          <h2>Technology projects</h2>
+        </div>
+      </div>
+      <div id="projectsGrid" class="projects-grid"></div>
+    </section>
+
+    <section class="section" id="notes">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">LEARNING LIBRARY</p>
+          <h2>Computer & ICT Notes</h2>
+          <p class="muted">Upload PDF, DOCX, PPTX or other study resources and organize them here.</p>
+        </div>
+        <label class="btn primary upload-btn">
+          Upload notes
+          <input id="notesInput" type="file" multiple hidden>
+        </label>
+      </div>
+
+      <div class="search-row">
+        <input id="notesSearch" type="search" placeholder="Search notes, topics or file names..." />
+        <select id="categoryFilter">
+          <option value="all">All categories</option>
+          <option value="computer">Computer</option>
+          <option value="ict">ICT</option>
+          <option value="networking">Networking</option>
+          <option value="programming">Programming</option>
+          <option value="office">Office Applications</option>
+          <option value="other">Other</option>
+        </select>
+      </div>
+
+      <div id="notesGrid" class="notes-grid"></div>
+      <div id="emptyNotes" class="empty-state">
+        <div class="empty-icon">📚</div>
+        <h3>No notes uploaded yet</h3>
+        <p>Use “Upload notes” to add your Computer and ICT materials.</p>
+      </div>
+    </section>
+
+    <section class="section" id="import">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">CONTENT IMPORT</p>
+          <h2>Bring in information from your existing website</h2>
+          <p class="muted">Enter a public website URL. The browser will try to read its headings and text; some websites block cross-site imports. You can also save links for later.</p>
+        </div>
+      </div>
+
+      <div class="import-panel glass-card">
+        <div class="import-form">
+          <input id="sourceUrl" type="url" placeholder="https://your-existing-website.com" />
+          <button class="btn secondary" id="saveSourceBtn">Save link</button>
+          <button class="btn primary" id="importBtn">Try import</button>
+        </div>
+        <div id="sourceLinks" class="source-links"></div>
+        <div id="importStatus" class="status"></div>
+
+        <div id="importPreview" class="import-preview hidden">
+          <div class="preview-header">
+            <div>
+              <span class="eyebrow">IMPORTED</span>
+              <h3 id="importTitle">Source information</h3>
+            </div>
+            <button class="small-btn" id="applyImportBtn">Add to profile</button>
+          </div>
+          <p id="importDescription"></p>
+          <div id="importHeadings" class="import-headings"></div>
+          <div id="importParagraphs" class="import-paragraphs"></div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div>
+      <strong>Mr Leshan</strong>
+      <span>Computer & ICT Learning Hub</span>
+    </div>
+    <span>© <span id="year"></span> Mr Leshan</span>
+  </footer>
+
+  <dialog id="profileDialog">
+    <form method="dialog" id="profileForm">
+      <div class="dialog-header">
+        <h3>Edit profile</h3>
+        <button value="cancel" class="close-btn">×</button>
+      </div>
+      <label>Name<input id="editName" required></label>
+      <label>Tagline<input id="editTagline"></label>
+      <label>Bio<textarea id="editBio" rows="6"></textarea></label>
+      <label>Tags <input id="editTags" placeholder="ICT, Computer Studies, Networking"></label>
+      <div class="dialog-actions">
+        <button value="cancel" class="btn secondary">Cancel</button>
+        <button value="default" class="btn primary">Save changes</button>
+      </div>
+    </form>
+  </dialog>
+
+  <script src="app.js"></script>
+</body>
+</html>

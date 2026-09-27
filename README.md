@@ -1,58 +1,43 @@
-# Mr Leshan Website — VS Code Project
+# Mr Leshan — GitHub Pages Website
 
-This project is a responsive Computer & ICT learning/profile website for **Mr Leshan**, populated with information from the supplied Biegon Emmanuel website.
+This is the **GitHub Pages-ready** version of the Mr Leshan Computer & ICT website.
 
-## Information incorporated
+## What is included
 
-The existing website supplied was:
-https://biegonemmanuel159-star.github.io/biegon-emmanuel/
+- Responsive Mr Leshan profile website
+- Uploaded profile photograph
+- Profile, education, skills, interests and projects
+- Grade 10 ICT notes (Terms 1–3)
+- Grade 10 Computer Science notes (Terms 1–3)
+- Notes search and category filter
+- Light/dark theme switch
+- Browser-based profile editing
+- Local browser uploads for additional notes/photo
+- Website link saving and best-effort browser import
 
-The project incorporates the public information shown there, including:
+## Publish on GitHub Pages
 
-- Computer Science Professional / Computer Teacher / Web Developer profile
-- Bachelor of Science in Computer Science — University of Kabianga
-- Diploma in Computer Science — Belgut Technical Training Institute
-- Software Development
-- Web Development
-- Networking
-- Cyber Security
-- Database Management
-- Artificial Intelligence
-- ICT Education
-- HTML5, CSS3, JavaScript, Python, Java, C, PHP, SQL, Networking, Cyber Security, Database Management and Microsoft Office
-- School Management System
-- Library Management System
-- Student Result Management System
-- Personal Portfolio Website
-- Contact and availability information
+GitHub Pages needs the publishing source to contain `index.html` at its top level. This package is already arranged that way.
 
-## Supplied files included
+1. Open your GitHub repository: `Mr.Leshan`.
+2. Replace/upload the files in this package into the repository root.
+3. Make sure these are at the root level:
+   - `index.html`
+   - `styles.css`
+   - `app.js`
+   - `profile.jpeg.png`
+   - `notes/`
+   - `.nojekyll`
+4. Go to **Settings → Pages**.
+5. Under **Build and deployment**, choose **Deploy from a branch**.
+6. Select your main branch and **/(root)**, then Save.
+7. Wait for the Pages deployment to complete and refresh your site.
 
-- `public/profile.jpeg.png` — uploaded profile photograph
-- `public/notes/GRADE-10-ICT-NOTES-TERM-1-2-3-TEACHER.CO_.KE_.pdf`
-- `public/notes/GRADE-10-COMPUTER-SCIENCE-NOTES-TERM-1-2-3-TEACHER.CO_.KE_.pdf`
+The live project URL should be:
+`https://biegonemmanuel159-star.github.io/Mr.Leshan/`
 
-## Run in VS Code
+## Important GitHub Pages limitation
 
-Install Node.js, open the project folder in VS Code, then run:
+GitHub Pages is static hosting. It does not run the original Node/Express `server.js`. The website therefore uses browser-side JavaScript. The website importer can only read another website when that website allows browser cross-origin access (CORS). The app also lets you save website links even when direct importing is blocked.
 
-```bash
-npm install
-npm start
-```
-
-Open:
-
-```text
-http://localhost:3000
-```
-
-## Website importer
-
-The Import section accepts a public URL and attempts to extract title, description, headings and paragraphs. Some sites block automated requests or require authentication.
-
-## Important production note
-
-The prototype stores user-uploaded files in browser storage. For a public production site, move notes and profile uploads to a proper storage/database system.
-
-The source website's public information was retrieved on the date this project was updated.
+Additional files uploaded through the website are stored in the browser's local storage, so they are not automatically shared with other visitors or devices. For permanent multi-user storage, use a backend/database service.
